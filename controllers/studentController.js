@@ -10,6 +10,7 @@ studentRouter.use(bodyParser.json())
 
 studentRouter.get('/', (req, res) => {
     res.send("Welcome to students Page")
+    
 })
 
 studentRouter.post('/addstudents',(req,res)=>{
