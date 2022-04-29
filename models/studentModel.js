@@ -2,7 +2,10 @@ var mongoose=require('mongoose')
 
 var studentSchema=new mongoose.Schema(
     {
-
+        doctorId: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref:'doctors'
+        },
         nameStudent:{
             type:String,
             required:true
