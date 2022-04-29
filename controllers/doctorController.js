@@ -1,11 +1,15 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 var mongoose=require('mongoose')
+var cors = require('cors')
 var { doctorModel } = require('../models/doctorModel')
 var doctorRouter=express.Router()
 
 doctorRouter.use(bodyParser.urlencoded({ extended: false }))
 doctorRouter.use(bodyParser.json())
+
+doctorRouter.use(cors())
+
 
 
 doctorRouter.get('/', (req, res) => {
